@@ -1,0 +1,18 @@
+{
+  "name": "backend_dos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1046.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.4",
+    "node-image-filter": "^1.0.0",
+    "sharp": "^0.29.3"
+  }
+}

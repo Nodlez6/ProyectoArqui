@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deplyment
+metadata:
+  name: B1-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec: 
+      containers:
+        - name: client
+          image: nodlez/backend_uno:v1
+          ports:
+            - containerPort: 3002

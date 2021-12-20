@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: Deplyment
+kind: Deployment
 metadata:
-  name: B2-deployment
+  name: bakcenddos-deployment
 spec:
   replicas: 1
   selector:
@@ -13,7 +13,9 @@ spec:
         component: server
     spec: 
       containers:
-        - name: B2
+        - name: backenddos
           image: nodlez/backend_dos:v1
+          command: [ "sleep" ]
+          args: [ "infinity" ]
           ports:
             - containerPort: 3001

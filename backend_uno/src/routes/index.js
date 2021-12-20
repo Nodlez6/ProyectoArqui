@@ -30,7 +30,7 @@ router.post('/upload' , (req , res) => {
     console.log(req.file)
 
 
-    fetch('http://localhost:3001/uploadImage', {
+    fetch('http://192.168.49.2:31516/uploadImage', {
     method: 'POST',
     body: JSON.stringify(todo),
     headers: { 'Content-Type': 'application/json' }

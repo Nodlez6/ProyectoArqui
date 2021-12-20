@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: Deplyment
+kind: Deployment
 metadata:
-  name: B1-deployment
+  name: backenduno-deployment
 spec:
   replicas: 1
   selector:
@@ -13,7 +13,9 @@ spec:
         component: web
     spec: 
       containers:
-        - name: client
+        - name: backenduno
           image: nodlez/backend_uno:v1
+          command: [ "sleep" ]
+          args: [ "infinity" ]
           ports:
             - containerPort: 3002

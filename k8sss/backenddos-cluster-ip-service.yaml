@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
-metada:
-  name: B1-cluster-ip-service
+metadata:
+  name: backenddos-cluster-ip-service
 spec:
   type: NodePort
-  slector:
+  selector:
     component: server
   ports:
     - port: 3001
